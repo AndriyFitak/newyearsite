@@ -1,15 +1,15 @@
 // Home.jsx
-
+import {Link} from "react-router-dom"
 import React, { useState } from 'react';
 import HomeImg from "../../images/HomeImg.jpg";
-import MountainsImg from "../../images/HomeMountainImg.jpg";
-import ForestImg from "../../images/forestImg.png";
+import ShopImg from "../../images/ShopImg.jpg";
+import HappyImg from "../../images/HappyImg.jpg";
 import ImgInfo1 from "../../images/imgInfo1.jpg";
-import ImgInfo2 from "../../images/imgInfo2.webp";
-import ImgInfo3 from "../../images/imgInfo3.webp";
+import ImgInfo2 from "../../images/imgInfo2.jpg";
+import ImgInfo3 from "../../images/imgInfo3.jpg";
 import HoverImg1 from "../../images/HoverImg1.jpg"
-import HoverImg2 from "../../images/HoverImg2.avif"
-import HoverImg3 from "../../images/HoverImg3.png"
+import HoverImg2 from "../../images/HoverImg2.jpg"
+import HoverImg3 from "../../images/HoverImg3.jpg"
 import './home.css';
 
 const Home = () => {
@@ -23,8 +23,8 @@ const Home = () => {
       <div className="header">
         <nav>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#expeditions">Expeditions</a></li>
+            <li>< Link href="/home">Home </Link></li>
+            <li><a href="#expeditions">Fair</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contacts">Contacts</a></li>
           </ul>
@@ -33,47 +33,47 @@ const Home = () => {
       <div className="image-container">
         <img src={HomeImg} alt="" />
         <div className="image-text">
-          <h2>Adventure awaits within</h2>
-          <button>To adventures</button>
+          <h2>New Years fair</h2>
+          <button>To the fair</button>
         </div>
       </div>
       <div className='image-mountains-home'>
-        <img src={MountainsImg} alt="" />
+        <img src={ShopImg} alt="" />
         <div className='img-block'>
         <div className="img-info">
           <img src={ImgInfo1} alt="InfoImage1" />
-          <p className="img-caption" style={{ fontSize: '30px' }}>Mountains</p>
+          <p className="img-caption" style={{ fontSize: '30px' }}>New Year Toys</p>
         </div>
         <div className="img-info">
           <img src={ImgInfo2} alt="InfoImage2" />
-          <p className="img-caption" style={{ fontSize: '30px' }}>Cave</p>
+          <p className="img-caption" style={{ fontSize: '30px' }}>Beautiful pictures</p>
         </div>
         <div className="img-info">
           <img src={ImgInfo3} alt="InfoImage3" />
-          <p className="img-caption" style={{ fontSize: '30px' }}>River</p>
+          <p className="img-caption" style={{ fontSize: '30px' }}>Firework</p>
         </div>
         </div>
       </div>
       <div className='image-mountains-home'>
-        <img src={ForestImg} alt=""/> 
+        <img src={HappyImg} alt=""/> 
         <div className='textInfoBlock'>
-            <h2 className='textH2'>{selectedImage ? selectedImage.title : 'Everest'}</h2>
+            <h2 className='textH2'>{selectedImage ? selectedImage.title : 'Vyshyvanka'}</h2>
             <div className='BlockPInfo'>
-              <p className='textP'>{selectedImage ? selectedImage.description : 'Mount Everest, the worlds highest peak at 29,032 feet (8,848 meters), stands majestically in the Himalayas on the Nepal-Tibet border. A symbol of awe-inspiring natural beauty and an enduring challenge for climbers, Everests summit beckons adventurers from across the globe. The trek to its pinnacle is a grueling test of strength, courage, and determination, offering an unparalleled experience against the breathtaking backdrop of the worlds tallest peaks.'}</p>
+              <p className='textP'>{selectedImage ? selectedImage.description : 'The Ukrainian vyshyvanka is a traditional embroidered blouse, renowned for its vibrant colors and intricate patterns. Worn with pride, it is a symbol of Ukraines rich cultural heritage and craftsmanship. Each vyshyvanka tells a unique story, with regional variations reflecting diverse traditions and beliefs. Beyond its aesthetic appeal, the vyshyvanka embodies a sense of identity, unity, and national pride, making it a cherished attire for celebratory occasions and a testament to the enduring legacy of Ukrainian artistry.'}</p>
             </div>
         </div>
         <div className='img-block-hover'>
-          <div className="img-info-hover" onClick={() => imageClickHandler('Everest', 'Mount Everest, the worlds highest peak at 29,032 feet (8,848 meters), stands majestically in the Himalayas on the Nepal-Tibet border. A symbol of awe-inspiring natural beauty and an enduring challenge for climbers, Everests summit beckons adventurers from across the globe. The trek to its pinnacle is a grueling test of strength, courage, and determination, offering an unparalleled experience against the breathtaking backdrop of the worlds tallest peaks.')}>
+          <div className="img-info-hover" onClick={() => imageClickHandler('Vyshyvanka', 'The Ukrainian vyshyvanka is a traditional embroidered blouse, renowned for its vibrant colors and intricate patterns. Worn with pride, it is a symbol of Ukraines rich cultural heritage and craftsmanship. Each vyshyvanka tells a unique story, with regional variations reflecting diverse traditions and beliefs. Beyond its aesthetic appeal, the vyshyvanka embodies a sense of identity, unity, and national pride, making it a cherished attire for celebratory occasions and a testament to the enduring legacy of Ukrainian artistry.')}>
             <img src={HoverImg1} alt="InfoImage1" />
-            <p className="img-caption-hover" style={{ fontSize: '30px' }}>Everest</p>
+            <p className="img-caption-hover" style={{ fontSize: '30px' }}>Vyshyvanka</p>
           </div>
-          <div className="img-info-hover" onClick={() => imageClickHandler('Amazonka', 'The Amazon River, spanning over 4,000 miles (6,400 kilometers) through South America, is the second-longest river globally, surpassed only by the Nile. It winds its way through the heart of the Amazon rainforest, the largest tropical rainforest on Earth, and is home to an extraordinary array of biodiversity. The river serves as a lifeblood for countless species and communities, offering a vital ecosystem and playing a crucial role in maintaining the planets ecological balance.')}>
+          <div className="img-info-hover" onClick={() => imageClickHandler('Dishes for Christmas Eve', 'Ukrainian Christmas Eve, known as Sviat Vechir, is a cherished and festive tradition celebrated on the evening of December 24th. Families gather around a table adorned with a symbolic embroidered cloth, known as a rushnyk, to share a 12-dish meatless meal, featuring traditional dishes like kutia, borscht, and varenyky. The evening is marked by the singing of carols, the lighting of candles, and the sharing of special rituals, including the breaking of the Christmas bread, or kolach.')}>
             <img src={HoverImg2} alt="InfoImage2" />
-            <p className="img-caption-hover" style={{ fontSize: '30px' }}>Amazonka</p>
+            <p className="img-caption-hover" style={{ fontSize: '30px' }}>Dishes for Christmas Eve</p>
           </div>
-          <div className="img-info-hover" onClick={() => imageClickHandler('Cave is optimistic', 'Optimistichna Cave, situated in the Ternopil region of Ukraine, stands as a geological marvel and a national natural monument of significant importance. Nestled within the picturesque Chortkiv district, to the southwest of the charming village of Korolivka, this extraordinary cave is enveloped by the scenic Korolivka forest tract. Notably, Optimistichna Cave has earned its place in the Guinness Book of Records as the worlds longest gypsum cave, adding to its allure as a captivating .')}>
+          <div className="img-info-hover" onClick={() => imageClickHandler('Christmas carol', 'The Ukrainian carol, known as kolyadka, is a heartfelt and melodious traditional song sung during the Christmas season. Passed down through generations, kolyadky hold deep cultural significance, often performed by groups of carolers who visit homes to spread festive cheer. These songs convey messages of joy, peace, and goodwill, celebrating the birth of Christ and sharing the spirit of the holiday season. With their lively tunes and meaningful lyrics, kolyadky evoke a sense of warmth, community')}>
             <img src={HoverImg3} alt="InfoImage3"/>
-            <p className="img-caption-hover" style={{ fontSize: '30px' }}>Cave is optimistic</p>
+            <p className="img-caption-hover" style={{ fontSize: '30px' }}>Christmas carol</p>
           </div>
         </div>
       </div>
